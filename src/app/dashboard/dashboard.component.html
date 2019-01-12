@@ -1,0 +1,128 @@
+<nav class="navbar main-color nav-container" style="z-index: 1000;">
+  <div class="nav-wrapper">
+    <div class="nav-container">
+      <img class="logo" src='./assets/logo.1.png'/>
+      <div style="align-self: center;" class="brand-heading">
+        <span class="brand-title">Synaren</span>
+      </div>
+      <div class="nav-button-group-container">
+        <div (click)="this.showDropdown = !this.showDropdown" 
+              class="dropdown brand-sub-title nav-button-group">
+          <button class="flat-btn btn-sm align-middle btn-outline-secondary" type="button">
+            Projects
+            <a class="fa fa-angle-down caret" [ngClass]="this.showDropdown ? 'checked' : ''"></a>
+          </button>
+        </div>
+
+        <!-- <div class="brand-sub-title nav-button-group">
+          <button (click)="scrollTo(about); this.showDropdown = false" class="flat-btn btn-sm align-middle btn-outline-secondary" type="button">
+            About
+          </button>
+        </div> -->
+      </div>
+      <!-- <div class="brand-sub-title">{{this.shownViewPort}}
+        <span class="blink">.</span>
+      </div> -->
+      <!-- <a class="navbar-brand">Synaren</a> -->
+      <!-- <a href="#" data-activates="mobile" class="button-collapse">
+        <i class="fa fa-bars" style="font-size:1.5em;"></i>
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="flexbox" *ngFor="let menuBar of menuBars">
+          <a *ngIf="menuBar.link === undefined"><a *ngIf="menuBar.icon" [class]="menuBar.icon" [ngStyle]="menuBar.style"></a>{{menuBar.name}}</a>
+          <a *ngIf="menuBar.link !== undefined" [href]="menuBar.link" class="hover-underline"><a *ngIf="menuBar.icon" [class]="menuBar.icon" [ngStyle]="menuBar.style"></a>{{menuBar.name}}</a>
+        </li>
+      </ul> -->
+      <!-- <ul class="side-nav" id="mobile">
+        <li class="flexbox" *ngFor="let menuBar of menuBars">
+          <a *ngIf="menuBar.link === undefined" href="#" class="width-100 center"><a *ngIf="menuBar.icon" [class]="menuBar.icon" [ngStyle]="menuBar.style"></a>{{menuBar.name}}</a>
+          <a *ngIf="menuBar.link !== undefined" [href]="menuBar.link" class="width-100 center"><a *ngIf="menuBar.icon" [class]="menuBar.icon" [ngStyle]="menuBar.style"></a>{{menuBar.name}}</a>
+        </li>
+      </ul> -->
+    </div>
+    <div [ngClass]="this.showDropdown ? 'show' : ''" class="main-color dropdown-nav">
+      <div class="main-color" style="text-align:right;padding-right:4px;">
+        <div (click)="scrollTo(cloudchat);this.showDropdown = false;" class="btn-nav">Cloud Chat</div>
+        <div (click)="scrollTo(imageviewer);this.showDropdown = false;" class="btn-nav">MovskiVR</div>
+        <div (click)="scrollTo(friendwork);this.showDropdown = false;" class="btn-nav">FriendWork</div>
+        <div (click)="scrollTo(spaceduck);this.showDropdown = false;" class="btn-nav">Space Duck</div>
+        <div (click)="scrollTo(webgl);this.showDropdown = false;" class="btn-nav">WebGL Engine</div>
+        <!-- <div (click)="scrollTo(documenteditor);this.showDropdown = false;" class="btn-nav">Document Editor</div> -->
+        <!-- <div (click)="scrollTo(ios);this.showDropdown = false;" class="btn-nav">ios</div> -->
+      </div>
+    </div>
+  </div>
+  <!-- <div class="nav-content ">
+    <ul class="tabs tabs-transparent ">
+      <li class="tab " *ngFor="let tab of tabs ">
+        <a routerLink="{{tab.path}}" routerLinkActive="active" (click)="this.routerService.pushRouteBase(tab.path,'n'); ">{{tab.name}}</a>
+      </li>
+    </ul>
+  </div> -->
+
+</nav>
+
+<!-- <div style="min-height: calc(100vh - 170px);">
+  <router-outlet></router-outlet>
+</div> -->
+
+<div #scrollContainer style="top:0;position:absolute;width:100%;height:100%;height:100vh;overflow-y:auto;overflow-x:hidden;">
+  <!-- trigger show in view text -->
+  <app-welcome [debounce]="0" [snInViewportParent]="scrollContainer" snInViewport (onInViewportChange)="onInViewportChange($event, 'welcome')">
+  </app-welcome>
+  <div #about [debounce]="0" class="lazy-infinite-scroll" [ngClass]="{'not-loaded': !showBinding.aboutme.shown}" [snInViewportParent]="scrollContainer"
+    snInViewport (onInViewportChange)="onInViewportChange($event, 'aboutme')">
+    <i class="spinner spinner-hidden"></i>
+    <app-about-me *ngIf="showBinding.aboutme.shown"></app-about-me>
+  </div>
+  <div #cloudchat [debounce]="0" class="lazy-infinite-scroll" [ngClass]="{'not-loaded': !showBinding.cloudchat.shown}" [snInViewportParent]="scrollContainer"
+    snInViewport (onInViewportChange)="onInViewportChange($event, 'cloudchat')">
+    <i class="spinner spinner-hidden"></i>
+    <app-cloudchat *ngIf="showBinding.cloudchat.shown"></app-cloudchat>
+  </div>
+  <div #imageviewer [debounce]="0" class="lazy-infinite-scroll" [ngClass]="{'not-loaded': !showBinding.imageviewer.shown}" [snInViewportParent]="scrollContainer"
+    snInViewport (onInViewportChange)="onInViewportChange($event, 'imageviewer')">
+    <i class="spinner spinner-hidden"></i>
+    <app-imageviewer *ngIf="showBinding.imageviewer.shown"></app-imageviewer>
+  </div>
+  <div #friendwork [debounce]="0" class="lazy-infinite-scroll" [ngClass]="{'not-loaded': !showBinding.friendwork.shown}" [snInViewportParent]="scrollContainer"
+    snInViewport (onInViewportChange)="onInViewportChange($event, 'friendwork')">
+    <i class="spinner spinner-hidden"></i>
+    <app-friendwork *ngIf="showBinding.friendwork.shown"></app-friendwork>
+  </div>
+  <div #spaceduck [debounce]="0" class="lazy-infinite-scroll" [ngClass]="{'not-loaded': !showBinding.spaceduck.shown}" [snInViewportParent]="scrollContainer"
+    snInViewport (onInViewportChange)="onInViewportChange($event, 'spaceduck')">
+    <i class="spinner spinner-hidden"></i>
+    <app-space-duck [inView]="inViewPort['spaceduck']" *ngIf="showBinding.spaceduck.shown"></app-space-duck>
+  </div>
+  <div #webgl [debounce]="0" class="lazy-infinite-scroll" [ngClass]="{'not-loaded': !showBinding.webgl.shown}" [snInViewportParent]="scrollContainer"
+    snInViewport (onInViewportChange)="onInViewportChange($event, 'webgl')">
+    <i class="spinner spinner-hidden"></i>
+    <app-webgl [inView]="inViewPort['webgl']" *ngIf="showBinding.webgl.shown"></app-webgl>
+  </div>
+  <!-- <div #documenteditor [debounce]="0" class="lazy-infinite-scroll" [ngClass]="{'not-loaded': !showBinding.documenteditor.shown}" [snInViewportParent]="scrollContainer"
+    snInViewport (onInViewportChange)="onInViewportChange($event, 'documenteditor')">
+    <i class="spinner spinner-hidden"></i>
+    <app-documenteditor *ngIf="showBinding.documenteditor.shown"></app-documenteditor>
+  </div> -->
+  <!-- <div #ios [debounce]="0" class="lazy-infinite-scroll" [ngClass]="{'not-loaded': !showBinding.ios.shown}" [snInViewportParent]="scrollContainer"
+    snInViewport (onInViewportChange)="onInViewportChange($event, 'ios')">
+    <i class="spinner spinner-hidden"></i>
+    <app-ios *ngIf="showBinding.ios.shown"></app-ios>
+  </div> -->
+
+  <footer style="padding-top:0;" class="page-footer main-color">
+    <div class="container">
+      <div class="row clearfix">
+          <div class="align-vertical col col-span-6">
+              <span>Nam Phan © 2018</span>
+          </div>
+          <div class="col col-span-6 clearfix">
+              <ul id="social-links" class="clearfix">
+                  <a class="linkedin-link fa fa-linkedin" href="https://www.linkedin.com/in/ndphan/"></a>
+              </ul>
+          </div>  
+      </div>
+    </div>
+  </footer>
+</div>

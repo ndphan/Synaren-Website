@@ -1,0 +1,77 @@
+:host {
+	background: #252839;
+	display: block;
+
+	.blink-atn {
+		animation: blinker-atn 3s ease-in-out infinite;
+	}
+	
+	@keyframes blinker-atn {
+		0% {
+						color: #908893;
+		}
+	
+		50% {
+						color: white
+		}
+	
+		100% {
+						color: #908893;
+		}
+	}
+
+	.welcome-page {
+		opacity: 0;
+		background: #252839;
+		position: relative;
+		min-height: 100%;
+		min-height: 100vh;
+		z-index: 0;
+  display: flex;
+  align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		animation-name: fadein;
+		animation-duration: 0.5s;
+		animation-delay: 0.1s;
+		animation-fill-mode: forwards;
+		height: 1px;
+	}
+
+	.brand-title {
+		color: #fff;
+		font-size: 1.5rem;
+		text-align: center;
+		line-height: 1.15em;
+		font-weight: 400;
+		user-select: none;
+		letter-spacing: 1px;
+		z-index: 1000;
+	}
+	.brand-heading {
+		padding-left: 1rem;
+		padding-top: 1rem;
+		z-index: 1000;
+	}
+
+	.brand-desc {
+		font-size: 2.6rem;
+		text-align: center;
+		line-height: 1.15em;
+		letter-spacing: 0;
+		font-weight: 400;
+		color: #D9DACA;
+		z-index: 1000;
+	}
+
+	.brand-support {
+		line-height: 1.6em;
+		color: #908893;
+		font-weight: 300;
+		letter-spacing: 1px;
+		text-align: center;
+		font-size: 1.5rem;
+		z-index: 1000;
+	}
+
+}

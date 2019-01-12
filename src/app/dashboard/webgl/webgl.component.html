@@ -1,0 +1,46 @@
+<div id="webgl" class="edge--top">
+  <br>
+  <br>
+  <div class="container text-center">
+    <!-- <div style="font-weight:500;text-align:center;" class="content-alignment lead text-uppercase">Create web-based graphics-rich applications</div> -->
+    <h1 class="content-alignment" style="text-align: center;color:white;  text-shadow: 2px 2px black;">WebGL Engine</h1>
+    <div style="text-align: center;" class="lead content-alignment">
+       Create 3D rich immersive applications. 
+       Built to provide fast performance.
+    </div>
+    <br>
+    <!-- <div class="content-alignment color-container row">
+      <div class="col-0 col-md-3"></div>
+      <div class="col-6 col-md-3">
+        <div class="icon-badge material-icons">
+          <i class="fa fa-rocket" aria-hidden="true"></i>
+        </div>
+        <p style="font-weight:bold;">Build immersive 3D apps</p>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="icon-badge material-icons">
+          <i class="fa fa-diamond" aria-hidden="true"></i>
+        </div>
+        <p style="font-weight:bold;">Easy and powerful API</p>
+      </div>
+      
+      <div class="col-0 col-md-3"></div>
+    </div>
+    <br> -->
+
+    <div class="section center content-alignment" id="frame-container" [ngStyle]="{width:iframeSize * 0.9 + 'px',height:iframeSize * 0.7 + 'px'}">
+      <iframe *ngIf="inView" class="game-frame" [ngClass]="{'in-view': inView === true}" id="webgl-container" (window:resize)="onResize()" scrolling="no" style="overflow:hidden;border:0 none solid;border-radius:2px;" src="https://synaren.com/game/"
+        frameBorder="0" width="{{iframeSize * 0.9 + 'px'}}" height="{{iframeSize * 0.7 + 'px'}}"></iframe>
+    </div>
+
+    <br>
+    
+    <div class="secondary-container content-alignment call-action light center section">
+      <div class="light center">Drag to look around. Touch the ground to move!
+      </div>
+      Edit the application script.&nbsp;
+      <br>
+      <!-- <a class="native-link" href="https://www.synaren.com/game">https://www.synaren.com/game</a> -->
+    </div>
+  </div>
+</div>
