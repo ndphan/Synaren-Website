@@ -11,13 +11,11 @@
     }
   },
   "scripts": {
-    "ng": "ng",
-    "build": "npm run env -s && ng build --prod && workbox generate:sw",
-    "watch": "npm-watch dev-build",
-    "dev-build": "ng build && workbox generate:sw",
-    "dev": "npm run ng build && concurrently -r --kill-others 'node live-server' 'npm run watch'",
+    "ng": "node_modules/.bin/ng",
+    "workbox": "node_modules/.bin/workbox",
+    "build": "ng build --prod && workbox generate:sw",
+    "build-dev": "ng build && workbox generate:sw",
     "start": "ng serve --base-href=/app/ && workbox-cli generate:sw",
-    "generate": "ng generate"
   },
   "dependencies": {
     "@angular/animations": "4.4.6",
