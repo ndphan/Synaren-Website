@@ -15,7 +15,7 @@
     "workbox": "node_modules/.bin/workbox",
     "build": "ng build --prod && workbox generate:sw",
     "build-dev": "ng build && workbox generate:sw",
-    "start": "ng serve --base-href=/app/ && workbox-cli generate:sw",
+    "start": "ng serve --base-href=/app/ && workbox-cli generate:sw"
   },
   "dependencies": {
     "@angular/animations": "4.4.6",
