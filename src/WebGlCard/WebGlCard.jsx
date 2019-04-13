@@ -6,21 +6,24 @@ import { Iframe } from './WebGlCard.styles';
 
 class WebGlCard extends PureComponent {
   render() {
+    const props = this.props;
     return (
       <SynarenCard
         isImageCardReverse={false}
         isImageCard={true}
-        descriptionStyle={{ padding: "50px", zIndex:"2"}}
-        contentStyle={{ height: "500px",marginTop:"-46px", zIndex:"1" }}
+        descriptionStyle={{ padding: "50px", zIndex: "2" }}
+        contentStyle={{ height: "500px", marginTop: "-50px", marginBottom: "-4px", zIndex: "1" }}
         content
         content={
-          <Iframe
-            allowFullScreen
-            allowvr="no"
-            frameBorder="0"
-            scrolling="no"
-            src="https://synaren.com/game/"
-          />
+          props.isVisible ?
+            <Iframe
+              allowFullScreen
+              allowvr="no"
+              frameBorder="0"
+              scrolling="no"
+              src="https://synaren.com/game/"
+            />
+            : undefined
         }
         header="3D JavaScript Engine (WebGL)"
         description="Create 3D rich immersive applications using this JavaScript OpenGL Engine.&#10;&#13;Click on the ground to move."
@@ -31,7 +34,8 @@ class WebGlCard extends PureComponent {
 }
 
 WebGlCard.propTypes = {
-  index: PropTypes.number
+  index: PropTypes.number,
+  isVisible: PropTypes.bool
 };
 
 WebGlCard.defaultProps = {};

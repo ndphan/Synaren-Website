@@ -5,21 +5,24 @@ import { Iframe } from './SpaceDuckCard.styles';
 
 class SpaceDuckCard extends PureComponent {
   render() {
+    const props = this.props;
     return (
       <SynarenCard
         isImageCardReverse={true}
         isImageCard={true}
         descriptionStyle={{ padding: "50px" }}
-        contentStyle={{height: "400px"}}
+        contentStyle={{ height: "400px" }}
         content
         content={
-          <Iframe
-          allowFullScreen
-          allowvr="no"
-          frameBorder="0"
-          scrolling="no"
-          src="https://synaren.com/space-duck/"
-        />
+          props.isVisible ?
+            <Iframe
+              allowFullScreen
+              allowvr="no"
+              frameBorder="0"
+              scrolling="no"
+              src="https://synaren.com/space-duck/"
+            />
+            : undefined
         }
         header="Space Duck"
         description="Space Duck is an arcade obstacle avoidance game where you avoid asteroids.The best way to survive is to follow Guardian Duck who can destroy the asteroids with lasers."
@@ -30,7 +33,8 @@ class SpaceDuckCard extends PureComponent {
 }
 
 SpaceDuckCard.propTypes = {
-  index: PropTypes.number
+  index: PropTypes.number,
+  isVisible: PropTypes.bool
 };
 
 SpaceDuckCard.defaultProps = {};
