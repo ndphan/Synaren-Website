@@ -16,9 +16,9 @@ class MovskivrCard extends PureComponent {
             src="https://www.synaren.com/movskivr-static/static/v2/index.html?accessToken=SH1Jy2B2XS7Qm1R2uCOTh6jAmb4TuLhoZW8aFyg9&amp;propertyId=0&amp;ref=synaren"
           />
         }
-        header="MovskiVR"
+        header={<a target="_blank" className="uk-link-heading" href={"https://www.movskivr.com.au/"}>MovskiVR</a>}
         link={
-          <a className="uk-link-heading" style={{ marginLeft: "4px", transform: "translateY(-10%)" }} href={"https://www.movskivr.com.au/"} uk-icon="link">
+          <a target="_blank" className="uk-link-heading" style={{ marginLeft: "4px", transform: "translateY(-10%)", color: "white" }} href={"https://www.movskivr.com.au/"} uk-icon="link">
             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="link"><path fill="none" stroke="#000" strokeWidth="1.1" d="M10.625,12.375 L7.525,15.475 C6.825,16.175 5.925,16.175 5.225,15.475 L4.525,14.775 C3.825,14.074 3.825,13.175 4.525,12.475 L7.625,9.375"></path><path fill="none" stroke="#000" strokeWidth="1.1" d="M9.325,7.375 L12.425,4.275 C13.125,3.575 14.025,3.575 14.724,4.275 L15.425,4.975 C16.125,5.675 16.125,6.575 15.425,7.275 L12.325,10.375"></path><path fill="none" stroke="#000" strokeWidth="1.1" d="M7.925,11.875 L11.925,7.975"></path></svg>
           </a>
         }

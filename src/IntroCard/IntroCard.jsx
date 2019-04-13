@@ -9,12 +9,13 @@ class IntroCard extends PureComponent {
       <SynarenCard
         description={
           <div>
+            <br/>
             <NamImage />
             <div>Nam Phan</div>
-            <Subtle>Creator, builder</Subtle>
-            <br />
+            <Subtle>Dreamer, Creator</Subtle>
+            <br/>
             Connect with me on <a href="https://www.linkedin.com/in/ndphan/">Linkedin</a>.
-              <br />
+            <br/>
             Find anything you like?
           </div>
         }
@@ -26,7 +27,7 @@ class IntroCard extends PureComponent {
         }
         contentStyle={{
           background: "#252839",
-          paddingTop: "80px"
+          paddingTop: "95px"
         }}
         {...this.props}
       />
