@@ -6,3 +6,13 @@ export const RootApp = styled.div`
   height: 100%;
   min-height: 100vh;
 `;
+
+export const FooterVersion = styled.div`
+  color: #6a737c;
+  font-size: 11px;
+  padding-right: 25px;
+  padding-bottom: 5px;
+  max-width: 800px;
+  margin: auto;
+  text-align: right;
+`
