@@ -73,7 +73,7 @@ SynarenCard.propTypes = {
 
 SynarenCard.defaultProps = {
   content: <div />,
-  link: <a />,
+  link: <i/>,
   description: "",
   contentStyle: {},
   isImageCard: false,

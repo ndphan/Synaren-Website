@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SynarenCard from '../Shared/SynarenCard';
 import { Iframe } from './CloudChatCard.styles';
@@ -38,14 +38,13 @@ class CloudChatCard extends Component {
 
   render() {
     const { screenWidth } = this.state;
-    const screenContentWidth = screenWidth > 568 ? "680px" : "800px";
+    const screenContentWidth = screenWidth > 568 ? "680px" : "870px";
     return (
       <SynarenCard
         isImageCardReverse={false}
         isImageCard={true}
         descriptionStyle={{ padding: "50px", zIndex:"2" }}
         contentStyle={{height: screenContentWidth, marginBottom:"0", marginTop:"-48px"}}
-        content
         content={
           <Iframe
           allowFullScreen

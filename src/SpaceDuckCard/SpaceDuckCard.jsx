@@ -12,7 +12,6 @@ class SpaceDuckCard extends PureComponent {
         isImageCard={true}
         descriptionStyle={{ padding: "50px" }}
         contentStyle={{ height: "400px" }}
-        content
         content={
           props.isVisible ?
             <Iframe
