@@ -12,7 +12,7 @@ class IntroCard extends PureComponent {
             <br/>
             <NamImage />
             <div>Nam Phan</div>
-            <Subtle>Dreamer, Creator</Subtle>
+            <Subtle>Builder, Creator</Subtle>
             <br/>
             Connect with me on <a href="https://www.linkedin.com/in/ndphan/">Linkedin</a>.
             <br/>

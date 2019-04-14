@@ -10,7 +10,7 @@ class CloudChatCard extends PureComponent {
         isImageCardReverse={false}
         isImageCard={true}
         descriptionStyle={{ padding: "50px", zIndex:"2" }}
-        contentStyle={{height: "600px", marginBottom:"-100px", marginTop:"-10px"}}
+        contentStyle={{height: "680px", marginBottom:"0", marginTop:"-48px"}}
         content
         content={
           <Iframe
@@ -18,7 +18,7 @@ class CloudChatCard extends PureComponent {
           allowvr="no"
           frameBorder="0"
           scrolling="no"
-          src="https://www.synaren.com/cloud-chat/chat"
+          src="https://www.synaren.com/synaren-chat/"
         />
         }
         header="Cloud Chat"
