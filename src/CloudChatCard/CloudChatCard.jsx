@@ -38,7 +38,7 @@ class CloudChatCard extends Component {
 
   render() {
     const { screenWidth } = this.state;
-    const screenContentWidth = screenWidth > 568 ? "680px" : "870px";
+    const screenContentWidth = screenWidth > 568 ? "680px" : "900px";
     return (
       <SynarenCard
         isImageCardReverse={false}
