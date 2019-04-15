@@ -13,7 +13,7 @@ fs.readFile(productionFile, 'utf8', (err, data) => {
   if (err) return console.log(err);
 		fs.writeFile(
 			productionFile, 
-			data.replace(/\REACT_APP_API_VERSION_NUMBER=[\d\-]+/g, `REACT_APP_API_VERSION_NUMBER=${randomBuildId()}`), 
+			data.replace(/\REACT_APP_API_VERSION_NUMBER=[\d\w\-]+/g, `REACT_APP_API_VERSION_NUMBER=${randomBuildId()}`), 
 			'utf8', 
 			err => err && console.log(err)
 		);

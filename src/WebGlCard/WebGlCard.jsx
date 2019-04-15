@@ -13,7 +13,6 @@ class WebGlCard extends PureComponent {
         isImageCard={true}
         descriptionStyle={{ padding: "50px", zIndex: "2" }}
         contentStyle={{ height: "500px", marginTop: "-50px", marginBottom: "-4px", zIndex: "1" }}
-        content
         content={
           props.isVisible ?
             <Iframe

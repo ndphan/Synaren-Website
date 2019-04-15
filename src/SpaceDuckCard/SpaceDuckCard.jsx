@@ -12,7 +12,6 @@ class SpaceDuckCard extends PureComponent {
         isImageCard={true}
         descriptionStyle={{ padding: "50px" }}
         contentStyle={{ height: "400px" }}
-        content
         content={
           props.isVisible ?
             <Iframe
@@ -25,7 +24,7 @@ class SpaceDuckCard extends PureComponent {
             : undefined
         }
         header="Space Duck"
-        description="Space Duck is an arcade obstacle avoidance game where you avoid asteroids.The best way to survive is to follow Guardian Duck who can destroy the asteroids with lasers."
+        description="Space Duck is an arcade obstacle avoidance game where you avoid asteroids. The best way to survive is to follow Guardian Duck who can destroy the asteroids with lasers."
         {...this.props}
       />
     );
