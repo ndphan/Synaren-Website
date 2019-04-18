@@ -9,7 +9,14 @@ export const Banner = styled.header`
 	user-select: none;
 	letter-spacing: 1px;
 	z-index: 1000;
-	${/*text-shadow: 2px 2px #534343;*/""}
 	border-radius: 2px;
-	${/*border-bottom: 1px gray solid;*/""}
 `;
+
+export const Boundary = styled.div`
+	// position: absolute;
+	// right: 0;
+	// top: 0;
+	margin-left: auto;
+	width: 300px;
+	// height: 43px;
+`

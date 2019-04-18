@@ -24,12 +24,11 @@ class WorkCarousel extends PureComponent {
         <Style.CarouselItemContainer>
           {componentsToRender.map((Section, index) => (
             <Style.CarouselItem key={index}>
-              <TrackVisibility partialVisibility once={Section === SpaceDuckCard}>
+              <TrackVisibility partialVisibility>
                 <Section index={index} />
               </TrackVisibility>
             </Style.CarouselItem>
-          ))
-          }
+          ))}
         </Style.CarouselItemContainer>
       </Style.CarouselContainer>
     );

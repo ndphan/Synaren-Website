@@ -46,7 +46,7 @@ class SynarenCard extends PureComponent {
       <div
         className={`${!props.isImageCard ? "uk-child-width-1-2@s uk-child-width-1-1" : "uk-child-width-1-1@s uk-child-width-1-1"} uk-grid-collapse uk-text-center`}
         uk-grid="true"
-        style={{ margin: "0 10px", borderRadius: "2px" }}
+        style={{ borderRadius: "2px" }}
       >
         <div>
           {props.isImageCard ? (!props.isImageCardReverse ? this.description() : this.content()) : isEven ? this.content() : this.description()}
