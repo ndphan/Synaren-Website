@@ -10,8 +10,8 @@ import e from './assets/5.png';
 import f from './assets/6.png';
 import g from './assets/7.png';
 import h from './assets/8.png';
-import k from './assets/11.png';
-import l from './assets/12.png';
+import k from './assets/9.png';
+import l from './assets/10.png';
 
 const Images = [a, b, c, d, e, f, g, h, k, l];
 
