@@ -17,6 +17,7 @@ export const Boundary = styled.div`
 	// right: 0;
 	// top: 0;
 	margin-left: auto;
-	width: 300px;
+	width: 400px;
+	margin-top: -1px;
 	// height: 43px;
 `
