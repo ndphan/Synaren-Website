@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ArticleItem = styled.div`
 `
 
-export const ArticleTrigger = styled.div`
+export const ArticleTrigger = styled.span`
 	&&& {
 		// vertical-align: top;
 		// text-align: right;
