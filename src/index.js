@@ -3,9 +3,12 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "./index.css";
-import "uikit";
+import UIkit from "uikit";
 import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
+import 'react-app-polyfill/ie11';
+import Icons from 'uikit/dist/js/uikit-icons';
+UIkit.use(Icons);
 
 const history = createBrowserHistory();
 
