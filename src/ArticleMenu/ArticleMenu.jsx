@@ -35,7 +35,7 @@ function Articles({articles = [], onClick = () => {}}){
 
 function ArticleListOffCanvas({ articles = [] }) {
   return (
-    <ArticleTrigger className="uk-inline" style={{ verticalAlign: 'top' }}>
+    <ArticleTrigger className="uk-inline" style={{ verticalAlign: 'top', marginTop: '-1px' }}>
       <span style={{ textAlign: "right", display: 'inline' }}>
         <a style={{ fontSize: '18px', width: '45px' }} className="uk-link-heading uk-link-reset">
           Blog
