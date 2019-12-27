@@ -7,6 +7,7 @@ class MovskivrCard extends PureComponent {
   render() {
     return (
       <SynarenCard
+        isReverse={true}
         content={
           <Style.Iframe
             allowFullScreen

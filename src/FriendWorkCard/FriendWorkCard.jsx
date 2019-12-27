@@ -26,7 +26,7 @@ class FriendWorkCard extends PureComponent {
   render() {
     return (
       <SynarenCard
-        isImageCard={true}
+        isReverse={true}
         descriptionStyle={{ padding: "50px" }}
         content={
           <div
@@ -43,7 +43,7 @@ class FriendWorkCard extends PureComponent {
                   <li key={index}>
                     <img data-src={image}
                       alt="Friendwork"
-                      style={{ height: "300px", objectFit: "scale-down"}}
+                      style={{ height: "300px", padding: "10px", objectFit: "scale-down"}}
                       uk-img={
                         (index === 0 ? "target: !ul > :last-child, !* +*" : index === Images.length - 1 ? "target: !* -*, !ul > :first-child" : "target: !* -*, !* +*")
                       }

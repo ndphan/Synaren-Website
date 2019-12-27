@@ -2,19 +2,17 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import SynarenCard from '../Shared/SynarenCard';
 import { Iframe } from './WebGlCard.styles';
-//import { Test } from './WebGlCard.styles';
 
 class WebGlCard extends PureComponent {
   render() {
-    const props = this.props;
+    const { isVisible } = this.props;
     return (
       <SynarenCard
-        isImageCardReverse={false}
-        isImageCard={true}
+        isReverse={false}
+        isDelayedLoad={true}
         descriptionStyle={{ padding: "50px", zIndex: "2" }}
-        contentStyle={{ height: "500px", marginTop: "-50px", marginBottom: "-4px", zIndex: "1" }}
         content={
-          props.isVisible ?
+          isVisible ?
             <Iframe
               allowFullScreen
               allowvr="no"
@@ -24,8 +22,8 @@ class WebGlCard extends PureComponent {
             />
             : undefined
         }
-        header="3D JavaScript Engine (WebGL)"
-        description="Create 3D rich immersive applications using this JavaScript OpenGL Engine.&#10;&#13;Click on the ground to move."
+        header={<div style={{verticalAlign:"middle",display:"inline-block"}}>3D JavaScript Engine&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://github.com/ndphan/JavaScriptWebGL" uk-icon="icon: github;" className="uk-link">&#8203;</a></div>}
+        description={<div>Create 3D rich immersive applications using this JavaScript Engine.<br/>Click on the ground to move or drag to look around.</div>}
         {...this.props}
       />
     );

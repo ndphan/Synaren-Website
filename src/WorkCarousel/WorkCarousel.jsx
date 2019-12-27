@@ -7,13 +7,17 @@ import SpaceDuckCard from '../SpaceDuckCard';
 import WebGlCard from '../WebGlCard';
 import CloudChatCard from '../CloudChatCard';
 import TrackVisibility from 'react-on-screen';
+import SpaceDuckBattleShipCard from '../SpaceDuckBattleShipCard';
+import DummyCard from '../DummyCard';
 
 const componentsToRender = [
   IntroCard,
   MovskivrCard,
+  SpaceDuckBattleShipCard,
+  DummyCard,
   FriendWorkCard,
-  SpaceDuckCard,
   CloudChatCard,
+  SpaceDuckCard,
   WebGlCard
 ]
 
