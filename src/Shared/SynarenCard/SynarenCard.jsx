@@ -1,9 +1,36 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Description, Title } from './SynarenCard.styles';
 
 
-class SynarenCard extends PureComponent {
+class SynarenCard extends Component {
+
+  timeoutRef;
+
+  state = {
+    isVisibleDelayed: !this.isDelayedLoad,
+  }
+
+  componentWillUnmount(){
+    this.clearTimeoutRef();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if(!prevProps.isVisible && this.props.isVisible) {
+      this.clearTimeoutRef();
+      this.timeoutRef = setTimeout(() => {
+        if(this.props.isVisible) {
+          this.setState({ isVisibleDelayed: true });
+        }
+      }, this.props.delayLoadTime);
+    }
+  }
+
+  clearTimeoutRef() {
+    if (this.timeoutRef !== undefined) {
+      clearTimeout(this.timeoutRef);
+    }
+  }
 
   isEven() {
     return this.props.index % 2;
@@ -30,18 +57,16 @@ class SynarenCard extends PureComponent {
   }
 
   content() {
+    const { isVisibleDelayed } = this.state;
     const props = this.props;
     const isEven = this.isEven();
-    return (
-      <div className={`${!isEven ? "uk-tile-primary" : "uk-tile-default"}  uk-tile uk-height-medium`} style={{ padding: 0, ...props.contentStyle}}>
-        {props.content}
+    return <div className={`${!isEven ? "uk-tile-primary" : "uk-tile-default"}  uk-tile uk-height-medium`} style={{ padding: 0, ...props.contentStyle}}>
+        {isVisibleDelayed ? props.content : undefined}
       </div>
-    )
   }
 
   render() {
     const props = this.props;
-    const isEven = this.isEven();
     return (
       <div
         className={`${!props.isImageCard ? "uk-child-width-1-2@s uk-child-width-1-1" : "uk-child-width-1-1@s uk-child-width-1-1"} uk-grid-collapse uk-text-center`}
@@ -49,10 +74,10 @@ class SynarenCard extends PureComponent {
         style={{ borderRadius: "2px" }}
       >
         <div>
-          {props.isImageCard ? (!props.isImageCardReverse ? this.description() : this.content()) : isEven ? this.content() : this.description()}
+          {props.isImageCard ? (!props.isReverse ? this.description() : this.content()) : props.isReverse ? this.content() : this.description()}
         </div>
         <div>
-          {props.isImageCard ? (!props.isImageCardReverse ? this.content() : this.description()) : !isEven ? this.content() : this.description()}
+          {props.isImageCard ? (!props.isReverse ? this.content() : this.description()) : !props.isReverse ? this.content() : this.description()}
         </div>
       </div>
     );
@@ -67,8 +92,11 @@ SynarenCard.propTypes = {
   index: PropTypes.number,
   contentStyle: PropTypes.object,
   isImageCard: PropTypes.bool,
-  isImageCardReverse: PropTypes.bool,
-  descriptionStyle: PropTypes.object
+  isReverse: PropTypes.bool,
+  descriptionStyle: PropTypes.object,
+  isVisible: PropTypes.bool,
+  isDelayedLoad: PropTypes.bool,
+  delayLoadTime: PropTypes.number
 };
 
 SynarenCard.defaultProps = {
@@ -77,8 +105,11 @@ SynarenCard.defaultProps = {
   description: "",
   contentStyle: {},
   isImageCard: false,
-  isImageCardReverse: false,
-  descriptionStyle: {}
+  isReverse: false,
+  descriptionStyle: {},
+  isVisible: true,
+  isDelayedLoad: false,
+  delayLoadTime: 1000
 };
 
 export default SynarenCard;
