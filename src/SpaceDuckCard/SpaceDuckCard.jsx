@@ -8,7 +8,7 @@ class SpaceDuckCard extends PureComponent {
     const props = this.props;
     return (
       <SynarenCard
-        isReverse={false}
+        isReverse={true}
         isDelayedLoad={true}
         descriptionStyle={{ height: "400px", padding: "70px" }}
         contentStyle={{ height: "400px" }}

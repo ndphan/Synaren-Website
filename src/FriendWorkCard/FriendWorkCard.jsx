@@ -26,7 +26,7 @@ class FriendWorkCard extends PureComponent {
   render() {
     return (
       <SynarenCard
-        isReverse={true}
+        isReverse={false}
         descriptionStyle={{ padding: "50px" }}
         content={
           <div

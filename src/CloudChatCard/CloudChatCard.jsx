@@ -7,7 +7,7 @@ class CloudChatCard extends Component {
   render() {
     return (
       <SynarenCard
-        isReverse={true}
+        isReverse={false}
         descriptionStyle={{ height: '400px', padding: "70px", zIndex:"2" }}
         contentStyle={{ height: '400px' }}
         content={

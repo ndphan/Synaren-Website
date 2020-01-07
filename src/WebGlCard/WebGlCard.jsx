@@ -9,8 +9,10 @@ class WebGlCard extends PureComponent {
     return (
       <SynarenCard
         isReverse={false}
+        isImageCard={true}
         isDelayedLoad={true}
         descriptionStyle={{ padding: "50px", zIndex: "2" }}
+        contentStyle={{ height: "500px", marginTop: "-50px", marginBottom: "-4px", zIndex: "1" }}
         content={
           isVisible ?
             <Iframe
