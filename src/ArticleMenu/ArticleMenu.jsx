@@ -20,7 +20,7 @@ function Articles({articles = [], onClick = () => {}}){
       <ArticleItem
         key={index}
       >
-        <ArticleLink className="uk-link-reset" target="_blank" rel="noopener noreferrer" href={`https://synaren-blog.com${articleRoute}`} onClick={onClick}>
+        <ArticleLink className="uk-link-reset" target="_blank" rel="noopener noreferrer" href={`http://blog.synaren-app.com${articleRoute}`} onClick={onClick}>
           <span style={{marginRight:'4px'}} className="uk-icon">
             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="file-text"><rect fill="none" stroke="#000" width="13" height="17" x="3.5" y="1.5"></rect><line fill="none" stroke="#000" x1="6" x2="12" y1="12.5" y2="12.5"></line><line fill="none" stroke="#000" x1="6" x2="14" y1="8.5" y2="8.5"></line><line fill="none" stroke="#000" x1="6" x2="14" y1="6.5" y2="6.5"></line><line fill="none" stroke="#000" x1="6" x2="14" y1="10.5" y2="10.5"></line></svg>
           </span>
