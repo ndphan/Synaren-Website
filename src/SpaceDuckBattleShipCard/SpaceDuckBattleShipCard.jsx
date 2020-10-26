@@ -10,7 +10,7 @@ class SpaceDuckBattleShipCard extends PureComponent {
       <SynarenCard
         isReverse={true}
         isDelayedLoad={true}
-        descriptionStyle={{ padding: "50px" }}
+        descriptionStyle={{ paddingTop: "30px" }}
         content={
           props.isVisible ?
             <Iframe

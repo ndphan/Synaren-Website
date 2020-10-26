@@ -9,7 +9,7 @@ class ELearningCard extends PureComponent {
       <SynarenCard
         isReverse={false}
         isImageCard={true}
-        contentStyle={{ height: "450px" }}
+        contentStyle={{ height: "450px", overflow: 'auto' }}
         content={
           <>
             <Style.HeroOverlay>Content Output</Style.HeroOverlay>
