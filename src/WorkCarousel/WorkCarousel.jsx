@@ -9,9 +9,11 @@ import CloudChatCard from '../CloudChatCard';
 import TrackVisibility from 'react-on-screen';
 import SpaceDuckBattleShipCard from '../SpaceDuckBattleShipCard';
 import ELearningCard from '../ELearningCard';
+import GamesCard from '../GamesCard';
 
 const componentsToRender = [
   IntroCard,
+  GamesCard,
   MovskivrCard,
   ELearningCard,
   SpaceDuckBattleShipCard,
