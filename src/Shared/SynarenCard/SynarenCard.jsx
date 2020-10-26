@@ -60,6 +60,9 @@ class SynarenCard extends Component {
   content() {
     const { isVisibleDelayed } = this.state;
     const props = this.props;
+    if(!props.content) {
+      return <></>
+    }
     const isEven = this.isEven();
     return (
       <div
@@ -124,7 +127,6 @@ SynarenCard.propTypes = {
 };
 
 SynarenCard.defaultProps = {
-  content: <div />,
   link: <i />,
   description: "",
   contentStyle: {},

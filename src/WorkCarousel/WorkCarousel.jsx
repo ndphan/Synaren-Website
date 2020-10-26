@@ -14,10 +14,10 @@ import DummyCard from '../DummyCard';
 
 const componentsToRender = [
   IntroCard,
-  GamesCard,
-  DummyCard,
   MovskivrCard,
+  GamesCard,
   ELearningCard,
+  DummyCard,
   SpaceDuckBattleShipCard,
   CloudChatCard,
   SpaceDuckCard,
