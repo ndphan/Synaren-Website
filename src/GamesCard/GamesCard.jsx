@@ -9,8 +9,7 @@ class GamesCard extends PureComponent {
       <SynarenCard
         isReverse={false}
         isImageCard={false}
-        descriptionStyle={{ height: '400px', padding: "70px", zIndex:"2" }}
-        contentStyle={{ height: '400px' }}
+        descriptionStyle={{ padding: "70px", zIndex:"2" }}
         content={
           <Style.Iframe
             frameBorder="0"
@@ -20,7 +19,7 @@ class GamesCard extends PureComponent {
           />
         }
         header={<a target="_blank" rel="noopener noreferrer" className="uk-link-heading" href={"https://games.synaren-app.com/"}>Synaren Games</a>}
-        description="Synareb Games is a website where you can play free games on your browser."
+        description="Synaren Games is a website where you can play free games on your browser."
         {...this.props}
       />
     );

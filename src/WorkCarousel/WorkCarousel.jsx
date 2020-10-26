@@ -10,10 +10,12 @@ import TrackVisibility from 'react-on-screen';
 import SpaceDuckBattleShipCard from '../SpaceDuckBattleShipCard';
 import ELearningCard from '../ELearningCard';
 import GamesCard from '../GamesCard';
+import DummyCard from '../DummyCard';
 
 const componentsToRender = [
   IntroCard,
   GamesCard,
+  DummyCard,
   MovskivrCard,
   ELearningCard,
   SpaceDuckBattleShipCard,
