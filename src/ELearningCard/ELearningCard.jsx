@@ -36,7 +36,7 @@ class ELearningCard extends PureComponent {
             </a>
           </>
         }
-        description="Create interactive, beautiful e-learning content using the e-learning management console. Easy to deploy and consume with no complex server required. Export as a JSON and read as an address. Amazing performance!"
+        description="Create interactive, beautiful e-learning content using the e-learning management console. Easy to deploy and consume with no complex server required. Export as a JSON and read as an address."
         {...this.props}
       />
     );
